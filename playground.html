@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Code Playground</title>
+<link href="css.css" rel="stylesheet" type="text/css" media="all">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="game/TemplateData/style.css">
+<link rel="shortcut icon" href="game/TemplateData/favicon.ico" />
+<script src="game/TemplateData/UnityProgress.js"></script>
+</head>
+
+<body>
+
+<div class="header">
+  <nav> <a href="index.html">Home</a> | <a href="resume.html">Resume</a> | <a href="about.html">About</a> | <a href="playground.html">Code Playground</a> | <a href="3d.html">3d Art</a> </nav>
+</div>
+<div class="main2">
+  <div class="column">
+    <h1>Code Playground</h1>
+    <p>This is a place to display stuff that I'm working on or small projects that I've completed. &nbsp&nbsp Lately I've been spending a lot of time working on Starship Captain, but I've also got an entire cruise ship modeled out to be used in a game that I can't wait to get to a point where I can show off a little. &nbsp&nbsp Stay tuned!</p>
+  </div>
+</div>
+<div class="main">
+  <div id="gasolineMachine">
+    <h1>The Gasoline Machine</h1>
+    <div id="input">
+      <p>How much did you spend?:
+        <input type="number" id="spentid">
+        <br>
+        <br>
+        How much did you pay per gallon?:
+        <input type="number" id="pergallonid">
+        <br>
+        <br>
+        How much did you see it going for?:
+        <input type="number" id="seenitid">
+        <br>
+        <br>
+      <p>
+        <input type="submit" onclick="calculate()" value="Submit">
+    </div>
+    <div id="output">
+      <p><span id="gallons"></span> <br>
+        <br>
+        <span id="overpaid"></span> <br>
+        <br>
+        <span id="extragas"></span>
+      <p> 
+    </div>
+  </div>
+  <script src="gasoline.js"></script> 
+</div>
+<div class="main">
+  <div id="starshipCaptain">
+    <h1>Starship Captain</h1>
+    <p>This is the WebGL version of a game I'm developing with the Playmaker addon for Unity.</p>
+    <p>The game runs much better if you give it a download:&nbsp&nbsp <a href="game/StarshipCaptain2.8.2017PCMAC.zip">Here</a></p>
+    <p>Use the middle mouse button/wheel to pan/zoom the camera and press HOME to return the camera to your Starship.</p>
+    <canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" height="600px" width="960px"></canvas>
+    <br>
+    <div class="logo"></div>
+    <div class="fullscreen"><img src="game/TemplateData/fullscreen.png" width="38" height="38" alt="Fullscreen" title="Fullscreen" onclick="SetFullscreen(1);" /></div>
+    <div class="title">Starship Captain</div>
+  </div>
+  <script type='text/javascript'>
+  var Module = {
+    TOTAL_MEMORY: 268435456,
+    errorhandler: null,			// arguments: err, url, line. This function must return 'true' if the error is handled, otherwise 'false'
+    compatibilitycheck: null,
+    backgroundColor: "#222C36",
+    splashStyle: "Light",
+    dataUrl: "game/Release/game.data",
+    codeUrl: "game/Release/game.js",
+    asmUrl: "game/Release/game.asm.js",
+    memUrl: "game/Release/game.mem",
+  };
+</script> 
+ <script src="game/Release/UnityLoader.js"></script>
+</div>
+</body>
+</html>
